@@ -233,10 +233,91 @@ console.log(bb**2);
 
 // toplama dışındaki tüm işlemlerde string-number sıkıntısı yok. //
 
-let ee = "123.45"
+let ee = "123.65"
 
 console.log(parseInt(ee));  // string tam çevir, tam sayısını göster
 console.log(parseFloat(ee)); // string tam çevir, virgülü de göster.
+
+
+// //* .toString() Metodu numberları stringe çevirir
+
+let f=123.45
+
+console.log(f.toString());
+console.log(typeof f);
+
+
+//* + ile de Number a çevirebiliriz
+
+console.log(+ee);
+let i=+ee
+
+console.log(typeof i);
+console.log(typeof ee);
+
+//* .toFixed() noktadan sonra kaç basamak alacağımızı belirtir, sayıyı stringe çevirir.
+
+console.log("****************");
+
+let z=0.345675678
+
+console.log(z.toFixed(4));
+console.log(+z.toFixed(2));
+
+// * promp komutu da toFixed gibi kullanılan sayıyı string yapar.
+
+// const age1= prompt("lütfen yaşınızı giriniz")
+
+// console.log(typeof age1);  // string
+
+// const age2= +prompt("lütfen yaşınızı giriniz")
+
+// console.log(typeof age2);  // number
+
+
+
+//* Null Undefined NaN
+
+console.log(typeof null); //object
+let n=null
+
+console.log(Boolean(n)); //false
+
+console.log(null-5); //-5
+
+console.log(null==undefined); //true  (denktir.)
+console.log(null===undefined); //false (eşittir.)
+
+console.log(Number("asdf"));
+console.log(Number("1234"));
+
+
+let karakter = 'A';
+let asciiDegeri = karakter.charCodeAt(0);
+console.log(asciiDegeri); // 65
+
+console.log("*************");
+
+console.log(null===null);
+
+console.log("***************");
+
+let metin = 'MerhabA';
+for (let i = 0; i < metin.length; i++) {
+    let asciiDegeri = metin.charCodeAt(i);
+    console.log(metin[i] + ': ' + asciiDegeri);
+}
+
+
+//!GENEL KÜLTÜR
+
+console.log(Number("0x11"));  //x=hexa 16lık taban 17
+console.log(Number("0b101")); // b=binary 2 lik taban 5
+console.log(Number("0o11"));  // o=octal 8 lik taban 9
+
+
+
+
 
 
 

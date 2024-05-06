@@ -1,6 +1,6 @@
-let ogr1_ad = "Halil";
+let ogr1_ad = "Emre";
 let ogr1_soyad ="Arıca";
-let ogr1_dogumTarihi ="1996"
+let ogr1_dogumTarihi ="2013"
 
 let ogr1_mat1 = 70;
 let ogr1_mat2 = 70;
@@ -11,9 +11,9 @@ let ogr1_ortalama = (ogr1_mat1 + ogr1_mat2 + ogr1_mat3) / 3 ;
 console.log(parseFloat(ogr1_ortalama)); // ParseFloat virgülleri de gösterir.
 console.log(ogr1_ortalama >= 50);
 
-let ogr2_ad = "Emre";
+let ogr2_ad = "Halil";
 let ogr2_soyad ="Arıca";
-let ogr2_dogumTarihi ="2013"
+let ogr2_dogumTarihi ="1996"
 
 let ogr2_mat1 = 40;
 let ogr2_mat2 = 40;
