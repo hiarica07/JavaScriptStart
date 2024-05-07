@@ -71,6 +71,57 @@
 
 //? ornek:maasınız asgari ücretten düşük ve eşitse maaşınıza %25 zam yapılsın, değilse maaşınıza %10 zam yapılsın. Ternary ile
 
-const asgariUcret = 17000;
-const maas=+prompt("maasinizi giriniz")
+// const asgariUcret = 17000;
+// const maas=+prompt("maasinizi giriniz")
 
+// const zamliMaas= maas <= asgariUcret ? maas*1.25 : maas*1.1
+
+// console.log(zamliMaas);
+
+// maas > 30000
+// ? maas *1.10
+// : maas > 20000
+// ? maas*1.2
+// : maas*1.5;
+
+//? Ornek: 10 aylık maasiniz borcunuzdan 5000 veya üstü kadar fazlaysa kredi alabilirsiniz, aksi durumda alamazsınız.
+
+// const Schuld = 30000
+// const Gehalt = 3600
+
+// console.log(Gehalt*10-Schuld >=5000 ? "kredi alabilir" : "kredi alamaz");
+
+
+
+//? ORNEK2: kullanıcıdan 3 tamsayi alarak bunlarin en buyugunu
+//? yazdiriniz.
+
+const n1 = 3
+const n2 = 5
+const n3 = 12
+
+if(n1>n2 && n1>n3){
+    console.log("biggest", n1);
+}
+
+else if(n2>n1 && n2>n3){
+    console.log("biggest", n2);
+}
+
+else console.log("biggest" , n3);
+
+
+//? kosullarin logical operatorler yardimiyla birleştirilmesi
+
+
+const s1=3;
+const s2=5;
+const s3=15;
+
+let biggest1 = s1
+
+if(s2 > biggest1)
+    biggest = s2
+
+if(s3 > biggest1)
+    biggest1 = s3
