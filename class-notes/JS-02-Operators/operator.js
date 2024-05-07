@@ -152,7 +152,7 @@ const dogumTarihi=1996
 
     console.log("onlar", Math.trunc (number/10)%10);
 
-    console.log("yüzler", Math.trunc(number/100));
+    console.log("yüzler", Math.trunc (number/100));
 
 
     // KARŞILAŞTIRMA OPERATORLERİ //
@@ -292,9 +292,9 @@ console.log(Number("asdf"));
 console.log(Number("1234"));
 
 
-let karakter = 'A';
-let asciiDegeri = karakter.charCodeAt(0);
-console.log(asciiDegeri); // 65
+// let karakter = 'A';
+// let asciiDegeri = karakter.charCodeAt(0);
+// console.log(asciiDegeri); // 65
 
 console.log("*************");
 
@@ -302,16 +302,16 @@ console.log(null===null);
 
 console.log("***************");
 
-let metin = 'MerhabA';
-for (let i = 0; i < metin.length; i++) {
-    let asciiDegeri = metin.charCodeAt(i);
-    console.log(metin[i] + ': ' + asciiDegeri);
-}
+// let metin = 'MerhabA';
+// for (let i = 0; i < metin.length; i++) {
+//     let asciiDegeri = metin.charCodeAt(i);
+//     console.log(metin[i] + ': ' + asciiDegeri);
+// }
 
 
 //!GENEL KÜLTÜR
 
-console.log(Number("0x11"));  //x=hexa 16lık taban 17
+console.log(Number("0x11"));  // x=hexa 16lık taban 17
 console.log(Number("0b101")); // b=binary 2 lik taban 5
 console.log(Number("0o11"));  // o=octal 8 lik taban 9
 
