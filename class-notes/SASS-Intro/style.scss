@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------- */
+/*        Variable Declaration        */
+/* ---------------------------------- */
+
+$bgColor:pink;
+$fontFamily:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$fontSize:1.2rem;
+$fontColor:white;
+$navbgColor:#30a7c3;
+$myBorder:2px solid brown;
+$bannerColor:hotpink;
+$buttonColor:rgb(143, 28, 81);
+
+body{
+    background-color: $bgColor;
+    font-family:$fontFamily;
+    font-size: $fontSize;
+    color: $fontColor;
+
+}
+
+/* ---------------------------------- */
+/*               Header               */
+/* ---------------------------------- */
+
+header{
+    background-color: $navbgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    img{
+        width: 80px;
+        border: $myBorder;
+        border-radius: 1rem;
+    }
+
+    ul{
+        list-style-type: none;
+
+        li{
+            display: inline-block;
+            padding: 0.5rem;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+/* ---------------------------------- */
+/*               BANNER               */
+/* ---------------------------------- */
+
+.banner{
+    background-color: $bannerColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    line-height: 2rem;
+
+    aside{
+        button{
+            padding: 0.5rem;
+            border: none;
+            background-color: $buttonColor;
+            color: $fontColor;
+
+            &:hover{
+                background-color: rgb(225, 11, 118);
+                cursor: pointer;
+                transform: scale(.97);
+            }
+        }
+    }
+
+    img{
+        width: 30%;
+        max-width: 400px;
+        min-width: 250px;
+    }
+}
+
+/* ---------------------------------- */
+/*                CARDS               */
+/* ---------------------------------- */
+
+//! @MIXIN
+
+//**************************
+
+@mixin myBox($backColor, $color){
+    width: 25%;
+    height: 15rem;
+    background-color: $backColor;
+    border-radius: 10px;
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+    .card1{
+        @include myBox(blue, yellow);
+    }
+    .card2{
+        @include myBox(magenta, green);
+    }
+    .card3{
+        @include myBox(yellow,teal);
+    }
+    .card4{
+        @include myBox(cadetblue,orange);
+    }
+}
+
+
+/* ---------------------------------- */
+/*              ARTICLES              */
+/* ---------------------------------- */
+
+//!@EXTEND
+
+//******************
+
+.articles{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+
+    .article1{
+        background-color: grey;
+        width: 50%;
+        height: 10rem;
+        border-radius: 10px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article2{
+        @extend .article1;
+        background-color: purple;
+    }
+    
+}
+
+
+/* ---------------------------------- */
+/*               FOOTER               */
+/* ---------------------------------- */
+//! FOR LOOP
+
+//*****************
+
+//***************************
+
+//! IF-ELSE
+
+//************************
+footer{
+
+    $dark:2;
+
+    p{
+       @if $dark==1 {
+        background-color: grey;
+
+    } @else if $dark==2 {
+        background-color: olive;
+    }
+      @else {
+        background-color: red;
+       }
+
+    }
+}
+
+
+//! FOR LOOP
+//********************
+
+.social-icons{
+    display: flex;
+    height: 10rem;
+    $textColor: #990000, #55004e, #0fa8a1, #dcacf1, #64c217;
+
+    @for $i from 1 through 5 {
+        .social#{$i}{
+            width: 20%;
+            background-color: lighten(blue, $i*5);
+            font-size: 1rem * $i;
+            color: nth($textColor , $i );
+        }
+    }
+}
+
+
