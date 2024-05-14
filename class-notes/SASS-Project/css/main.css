@@ -8,11 +8,11 @@
 /* ---------------------------------- */
 /*               FOOTER               */
 /* ---------------------------------- */
-.link-style a, footer.vertical .social-icons a, footer.horizontal a {
+.link-style a, footer.middle a, footer.vertical .social-icons a, footer.horizontal a {
   padding: 0.4rem;
   transition: all 1s;
 }
-.link-style a:hover, footer.vertical .social-icons a:hover, footer.horizontal a:hover {
+.link-style a:hover, footer.middle a:hover, footer.vertical .social-icons a:hover, footer.horizontal a:hover {
   color: #ff652f;
 }
 
@@ -41,6 +41,16 @@ footer.vertical .copyright {
   bottom: 1rem;
   right: 1rem;
   writing-mode: vertical-lr;
+}
+
+footer.middle {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .nav {
@@ -111,6 +121,41 @@ footer.vertical .copyright {
 }
 .about__job h6 {
   margin: 0.3rem 0;
+}
+
+.contact-bgImg-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/project-5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.contact-bgImg-container .nav {
+  height: 40vh;
+}
+
+.contact {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.contact__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.5rem;
+  align-items: center;
+  gap: 2rem;
+}
+.contact .text-secondary {
+  color: #ff652f;
 }
 
 /* ---------------------------------- */
