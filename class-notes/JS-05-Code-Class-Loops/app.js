@@ -219,7 +219,7 @@ while (originalNumber != 0) {
 originalNumber = num;
 
 while (originalNumber > 0) {
-  let sayi = originalNumber % 10;
+  let sayi = originalNumber % 10; // 153 / 10 = 15.3
   sum += sayi ** sayac;
   originalNumber = Math.floor(originalNumber / 10);
 }
