@@ -114,3 +114,21 @@ const arg3=(...a)=> {
 arg3(34,55,78,89,12,345,67)
 arg3("merhaba", "hi" , "hallo")
 
+
+
+let x = function()
+ { 
+    return 15; 
+}
+
+()
+;
+
+console.log(x);
+
+
+let test = function(a) {
+    return a * a;
+}
+
+console.log(test(5));
