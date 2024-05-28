@@ -118,4 +118,37 @@ const findAnimal=()=>{
 console.log(findAnimal());
 
 
+//* ======================================================
+//*                   FOR OF LOOP
+//* ======================================================
+
+//* for of dongusu, for in dongusunun bir cok veri yapisini kapsayacak sekilde guncellenmis halidir. Bu dongude dizi icindeki veriye erisirken indisleme kullanmaya gerek yoktur.
+
+//* ORNEK: alttaki dizinin elemanlarını yanyana string olarak yazdır (for of döngüsü kullanın)
+
+const arabalar = ["bmw", "mercedes", "audi", "volvo"];
+
+//!.1.yol
+
+console.log(arabalar.join(""));
+
+//!.2.yol
+
+let araba=""
+for (let i of arabalar){
+    araba = araba + i
+}
+
+console.log(araba);
+
+
+//! for loop=> Bir dizi üzerinde iteration yapmanın orjinal yollarından biridir.	
+//? forEach=> Bir dizi üzerinde iteration yapmak için daha az kod içeren daha yeni bir yoldur.
+//! for loop=>Performansta daha hızlıdır.	
+//? forEach=> Performansta geleneksel döngüden daha yavaştır.
+//! for loop=> Break ifadesi döngüden çıkmak için kullanılabilir.	
+//? forEach=> Break ifadesi, geri arama işlevi nedeniyle kullanılamaz.
+
+
+
 
