@@ -71,3 +71,17 @@
         }
 
     },1000)
+
+
+
+    // //?callback hell
+
+setTimeout(() => {
+    console.log("ayse:s.a. ahmet");
+    setTimeout(() => {
+      console.log("ahmet:a.s. ayse nasılsın");
+      setTimeout(() => {
+        console.log("ayse:iyiyim sağol");
+      }, 1000);
+    }, 1000);
+  }, 1000);
