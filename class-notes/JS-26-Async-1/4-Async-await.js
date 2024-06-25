@@ -20,35 +20,56 @@
 
 //! JavaScript finally anahtar kelimesi hata oluşması veya oluşmaması durumunda (her durumda) çalışacak kodları yazdırmak için kullanılır.
 
-const defaultImage = "https://tr.pinterest.com/pin/753156737700862321/"
+const defaultImage =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/220px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg";
 
-const getData = async() => {
 
-  const res = await  fetch("https://api.tvmaze.com/search/shows?q=girls")
 
-  const veri = await res.json()
+const getData=async()=>{
 
-  printScreen(veri)
+ try{
+   const res = await fetch("https://api.tvmaze.com/search/shows?q=girls");
+
+  //?error handling
+if(!res.ok){
+
+  throw new Error(`url de hata var ${res.status}`)
+  console.log("hata");
+
+}
+
+  const veri=  await  res.json()
+
+    ekranaBastir(veri)
+
+  }catch(error){
+console.log(error);
+console.log("try-catch sayesinde kod devam ediyor");
+document.querySelector("section").innerHTML=`
+<h1>${error}</h1>
+<img src="./img/404.png"/>
+`
+
+  }
+
+ 
 }
 
 getData()
 
-const printScreen = (data) =>{
-    // const div = document.createElement("div")
+const ekranaBastir=(data)=>{
 
-    // const users = document.querySelector("section").appendChild(div)
+// const div= document.createElement("div")
+
+//  const users= document.querySelector("section").appendChild(div)
+
 data.forEach((program)=>{
 
-  document.querySelector("section").innerHTML+=
-  `
-  <h1 class="text-danger">${program.show.name}</h1>
-  <img src=${program.show.image?.medium || defaultImage}  />
-  
-  
-  
-  `
+document.querySelector("section").innerHTML += `
 
+<h1 class="text-danger">${program.show.name}</h1>
+<img src="${program.show.image?.medium  || defaultImage}"/>
+
+`;
 })
-
-    
 }
