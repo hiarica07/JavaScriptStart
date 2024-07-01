@@ -19,6 +19,11 @@ let altEkranText = "";
 //?*********** herhangi bir number a basılınca
 
 numberButtons.forEach((number) => {
+
+  number.onclick=()=>{
+    ekranaHazirlik(number.textContent)
+    updateEkran()
+  }
  
 
 });
@@ -47,6 +52,7 @@ const ekranaHazirlik = (num) => {
 
   //?bütün şartları başarı ile geçtiyse basılan numaraları arka arkaya ekle
 
+    altEkranText += num
 
 };
 
@@ -54,7 +60,7 @@ const ekranaHazirlik = (num) => {
 
 const updateEkran = () => {
 
-
+altEkranDiv.textContent=altEkranText
  
 
   //?işlem girilince
